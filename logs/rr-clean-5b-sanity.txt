@@ -1,0 +1,26 @@
+Check/Sanity.lean:95:66: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Check/Sanity.lean:97:38: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Check/Sanity.lean:99:38: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Check/Sanity.lean:112:8: warning: Variable name `I` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _I
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Check/Sanity.lean:122:8: warning: Variable name `I` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _I
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'RankRingsSanity.quotient_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RankRingsSanity.ultra_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RankRingsSanity.rat_maps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RankRingsSanity.complex_maps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RankRingsSanity.matrix_maps' depends on axioms: [propext, Classical.choice, Quot.sound]

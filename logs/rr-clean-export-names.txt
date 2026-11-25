@@ -1,0 +1,2 @@
+theorems in export: 53498 axioms in export: ['Classical.choice', 'Quot.sound', 'propext'] missing named theorems: []
+EXPORT-OK

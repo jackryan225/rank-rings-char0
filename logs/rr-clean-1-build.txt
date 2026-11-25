@@ -1,0 +1,80 @@
+info: mathlib: cloning https://github.com/leanprover-community/mathlib4.git
+info: mathlib: checking out revision 'd13f23b723b8a846827a245b89c10fc7d3f11612'
+info: plausible: cloning https://github.com/leanprover-community/plausible
+info: plausible: checking out revision '118aa17ee84656b8bd727fef7c458ee8c833385c'
+info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+info: LeanSearchClient: checking out revision 'ddf04cf3949fa556442341e87d47f9f6e6074707'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph
+info: importGraph: checking out revision 'e928b72544873815af278d38681b31c0293588e3'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+info: proofwidgets: checking out revision '106ff4fafc74ef4ac99d81dbf3ab399118f497a5'
+info: aesop: cloning https://github.com/leanprover-community/aesop
+info: aesop: checking out revision '355695d523e41d0554926416cba2a2b3544fbbc9'
+info: Qq: cloning https://github.com/leanprover-community/quote4
+info: Qq: checking out revision '6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259'
+info: batteries: cloning https://github.com/leanprover-community/batteries
+info: batteries: checking out revision 'f2effa3d803fda822b1f97b806c47cf2adfbcbc2'
+info: Cli: cloning https://github.com/leanprover/lean4-cli
+info: Cli: checking out revision 'e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204'
+✔ [8924/8948] Built RankRings.CAlg (11s)
+warning: RankRings/Geom.lean:155:53: Variable name `hu` is not explicitly referenced.
+warning: RankRings/Geom.lean:155:66: Variable name `h` is not explicitly referenced.
+warning: RankRings/Geom.lean:174:30: This simp argument is unused:
+✔ [8926/8948] Built RankRings.Words (14s)
+✔ [8927/8948] Built RankRings.SRank (4.9s)
+✔ [8928/8948] Built RankRings.Plane (6.4s)
+✔ [8929/8948] Built RankRings.LogDet (5.7s)
+warning: RankRings/WordsBlock.lean:36:28: `if_true` has been deprecated: Use `ite_true` instead
+warning: RankRings/WordsBlock.lean:19:33: Variable name `hY` is not explicitly referenced.
+warning: RankRings/Smith.lean:154:39: This simp argument is unused:
+warning: RankRings/Smith.lean:154:60: This simp argument is unused:
+warning: RankRings/Smith.lean:155:39: This simp argument is unused:
+warning: RankRings/Smith.lean:155:60: This simp argument is unused:
+warning: RankRings/Smith.lean:179:4: Try this: 
+warning: RankRings/Smith.lean:320:30: Variable name `ha` is not explicitly referenced.
+✔ [8932/8948] Built RankRings.Descent (5.8s)
+✔ [8933/8948] Built RankRings.Exotic (6.8s)
+✔ [8934/8948] Built RankRings.RankRing (5.7s)
+warning: RankRings/Ineq.lean:19:0: automatically included section variable(s) unused in theorem `RankRings.mvec_add`:
+warning: RankRings/Ineq.lean:22:0: automatically included section variable(s) unused in theorem `RankRings.mvec_zero`:
+warning: RankRings/Ineq.lean:32:0: automatically included section variable(s) unused in theorem `RankRings.inner_mvec`:
+warning: RankRings/Ineq.lean:61:0: automatically included section variable(s) unused in theorem `RankRings.trace_mul_ge`:
+warning: RankRings/Ineq.lean:80:13: This simp argument is unused:
+warning: RankRings/Ineq.lean:145:8: this tactic is never executed
+warning: RankRings/Ineq.lean:145:8: Unused tactic linter: `noncomm_ring` does nothing
+warning: RankRings/RankFn.lean:27:20: Variable name `r` is not explicitly referenced.
+warning: RankRings/RankFn.lean:48:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+warning: RankRings/RankFn.lean:122:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+warning: RankRings/RankFn.lean:134:65: Variable name `A` is not explicitly referenced.
+warning: RankRings/RankFn.lean:134:67: Variable name `B` is not explicitly referenced.
+warning: RankRings/RankFn.lean:241:6: This simp argument is unused:
+warning: RankRings/NoHom.lean:54:0: automatically included section variable(s) unused in theorem `RankRings.rank_sum_le`:
+warning: RankRings/NoHom.lean:101:29: Variable name `i` is not explicitly referenced.
+warning: RankRings/NoHom.lean:104:23: Variable name `i` is not explicitly referenced.
+warning: RankRings/NoHom.lean:110:23: Variable name `i` is not explicitly referenced.
+warning: RankRings/NoHom.lean:113:23: Variable name `i` is not explicitly referenced.
+warning: RankRings/NoHom.lean:248:24: This simp argument is unused:
+✔ [8938/8948] Built RankRings.ExoticS (6.5s)
+warning: RankRings/NoHomF.lean:145:29: Variable name `i` is not explicitly referenced.
+warning: RankRings/NoHomF.lean:148:23: Variable name `i` is not explicitly referenced.
+warning: RankRings/NoHomF.lean:156:23: Variable name `i` is not explicitly referenced.
+warning: RankRings/NoHomF.lean:160:23: Variable name `i` is not explicitly referenced.
+warning: RankRings/NoHomF.lean:272:0: automatically included section variable(s) unused in theorem `RankRings.Gen.transfer_mul`:
+warning: RankRings/NoHomF.lean:331:24: This simp argument is unused:
+✔ [8940/8948] Built RankRings.Main (5.9s)
+✔ [8941/8948] Built RankRings.Final (4.9s)
+warning: RankRings/FiniteForm.lean:112:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+✔ [8943/8948] Built Solution (5.4s)
+info: RankRings/FiniteFormF.lean:289:0: 'RankRings.eps_char0' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RankRings/FiniteFormF.lean:290:0: 'RankRings.finite_form_char0' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RankRings/FiniteFormF.lean:291:0: 'RankRings.finite_form_of_char0' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RankRings/FiniteFormF.lean:292:0: 'RankRings.eps_char0_paper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RankRings/FiniteFormF.lean:293:0: 'RankRings.finite_form_paper' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: RankRings/ModL.lean:248:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+info: RankRings/ModL.lean:294:0: 'RankRings.exists_config_modL' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RankRings/ModL.lean:295:0: 'RankRings.config_modL' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RankRings/ModL.lean:296:0: 'RankRings.rel_modL' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RankRings/ModL.lean:297:0: 'RankRings.char_contrast' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RankRings/ModL.lean:298:0: 'RankRings.finite_form_modL' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8947/8948] Built RankRings (3.7s)
+Build completed successfully (8948 jobs).

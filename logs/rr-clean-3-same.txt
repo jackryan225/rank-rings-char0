@@ -1,0 +1,6 @@
+⚠ [8924/8925] Built Challenge.Statement (4.2s)
+warning: Challenge/Statement.lean:55:8: declaration uses `sorry`
+warning: Challenge/Statement.lean:62:8: declaration uses `sorry`
+warning: Challenge/Statement.lean:70:8: declaration uses `sorry`
+Build completed successfully (8925 jobs).
+all 20 declarations of Challenge.Statement are equal to those of Solution

@@ -1,0 +1,3 @@
+checked 68066 declarations
+       89.31 real        88.53 user         0.50 sys
+           953237504  maximum resident set size
