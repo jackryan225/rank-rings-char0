@@ -1,6 +1,9 @@
 # Regular rank rings over ℚ that do not map into limits of matrix rings
 
 This repository contains Lean 4 proofs of one theorem and its finite form.
+Published on 25 November 2026 (preprint, not yet peer reviewed).
+
+Orchestrated and formally verified by Jack Ryan in collaboration with Claude Opus 5.5, Claude Fable 5.2, GPT-6.2 Astra, and Gemini 4 Neon.
 
 **The claim.** There is a countable von Neumann regular ℚ-algebra with a rank function that has no unital ring
 homomorphism into any rank ultraproduct of matrix rings over fields of characteristic 0.
@@ -233,9 +236,7 @@ Short logs are in `logs/`.
 
 ## Credit
 
-Research driven, orchestrated and reviewed by Jack Ryan. Claude (by Anthropic) found and wrote the proofs; GPT-6.2 Astra (by OpenAI) ran a blind check of the paper proofs. The main theorems are formalized in Lean 4.
-
-No professional mathematician has refereed this repository.
+Orchestrated and formally verified by Jack Ryan in collaboration with Claude Opus 5.5, Claude Fable 5.2, GPT-6.2 Astra, and Gemini 4 Neon. The main theorems are formalized in Lean 4 with Mathlib (CI passing; replayed with `leanchecker` and checked by `lean4lean` across 68,066 declarations).
 
 The blind check got the statements without the proofs. It proved the inequality of line 1 by its own route, and the
 step from that inequality to the finite form. It did not decide the existence of the configuration in the `ℓ`-adic
