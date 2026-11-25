@@ -65,6 +65,14 @@ the results in this repository. We found none. A search cannot prove that there 
    function", "linear sofic", "Elek", "rank ultraproduct", "von Neumann regular" or "Connes embedding". The only
    related family is "every group is sofic" (groups).
 
+8. **12:58 to 13:03, for the addendum `VN.md`.** A web search by GPT-6.2 Sol with 168 queries, for two statements: the
+   inequality of line 1 for idempotents in the ring `U(M)` of a finite von Neumann algebra, and a regular rank
+   ℚ-algebra with no unital ring homomorphism into any `U(M)`. Places: arXiv, papers that cite Elek 1006.5378 and
+   Dvir-Hu 1412.0795, hexagonmath.org, MathOverflow, GitHub and others. Verdict: no earlier statement of the second;
+   the first is known for commutative `M` (an expander mixing bound) and for matrices (the balancing of Dvir and Hu),
+   and was not found for a general finite von Neumann algebra. Gaps: the citation services did not respond, and
+   journals behind a paywall were not read.
+
 ## Nearest known results
 
 - Greenfeld, arXiv:2210.11650: stably finite algebras that are not linear sofic, over every field. They have no
