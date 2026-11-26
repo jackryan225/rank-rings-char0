@@ -75,8 +75,11 @@ the results in this repository. We found none. A search cannot prove that there 
 
 ## Nearest known results
 
-- Greenfeld, arXiv:2210.11650: stably finite algebras that are not linear sofic, over every field. They have no
-  faithful rank function, so they do not embed into a regular rank ring.
+- Greenfeld, arXiv:2210.11650: stably finite algebras that are not linear sofic, over every field. By his Lemma 2.1
+  every Sylvester rank function on them vanishes on a nonzero element (our deduction; not stated in the paper). So
+  they have no faithful Sylvester rank function and do not embed into a regular rank ring. Stably finite algebras
+  that are not linear sofic are therefore not new; what we found no earlier example of is one with a faithful
+  Sylvester rank function.
 - Bauer, Blachar, Greenfeld, arXiv:2401.04676, Example 2.4: the equations `xyz = 1`, `xzy = 0` have no approximate
   matrix solutions with normalized rank error below 1/4, over any field. These equations have no solution in a ring
   with a faithful rank function either, so they give no example of our kind.
