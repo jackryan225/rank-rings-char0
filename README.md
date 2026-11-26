@@ -78,7 +78,7 @@ arXiv:2210.11650; see "Earlier work" below), which admit no faithful Sylvester r
 
 ## The relations `B_ℓ`
 
-Let `ℓ ≥ 7` be a prime. Let `P` be the set of points and `L` the set of lines of the projective plane over `𝔽_ℓ`.
+Let `ℓ` be a prime (the obstruction in characteristic 0 uses `ℓ ≥ 7`, specifically `ℓ = 7`; the exact solutions over `𝔽_ℓ` hold for every prime `ℓ`). Let `P` be the set of points and `L` the set of lines of the projective plane over `𝔽_ℓ`.
 Fix a bijection `σ : P → L` **without fixed point**: `p` does not lie on `σ(p)`, for every point `p`. Such a `σ`
 exists by Hall's theorem. Let `E` be the set of pairs `(p, p')` of points with `p` on the line `σ(p')`.
 
@@ -133,8 +133,8 @@ be attained. An approximation by bounded idempotents gives the case of unbounded
 What this addendum does **not** give:
 
 - It answers none of the three open readings of Elek's question that the next section lists.
-- It does not contain the Lean theorem, and the Lean theorem does not contain it. A rank ultraproduct of matrix rings
-  is not a ring `U(M)`.
+- Neither this addendum nor the Lean theorem is derived from the other here: a rank ultraproduct of matrix rings is
+  not presented as a ring `U(M)`, and `U(M)` is not assumed to embed into a rank ultraproduct of matrix rings.
 - It says nothing about groups. For every group `G`, the group algebra `ℂ[G]` lies in `U(L(G))`, where the inequality
   holds. So it gives nothing for sofic or hyperlinear groups or for the Connes embedding problem.
 - Finite AW*-algebras that are not von Neumann algebras are not treated.

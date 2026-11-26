@@ -67,8 +67,9 @@ The countable regular rank ℚ-algebra `S` has no unital ring homomorphism into 
 over fields of characteristic 0 (**Lean**), and none into `U(M)` for any nonzero finite von Neumann algebra `M`
 (**paper proof, this file**).
 
-Theorem A contains the matrix inequality of line 1. Theorem B does not contain the Lean theorem, and the Lean theorem
-does not contain Theorem B: a rank ultraproduct of matrix rings is not a ring `U(M)`.
+Theorem A contains the matrix inequality of line 1. Neither Theorem B nor the Lean theorem is derived from the other
+here: a rank ultraproduct of matrix rings is not presented as a ring `U(M)`, and `U(M)` is not assumed to embed into a
+rank ultraproduct of matrix rings.
 
 ## 2. What is not claimed
 
@@ -122,7 +123,8 @@ projections of Step 1 for `E_i`, and put
 
     D(g) = Σ_i (P_i + Q_i - 1),     Φ(g) = Σ_i τ(log L(E_i)).
 
-`D(g)` is self-adjoint, and `Φ(g) ≥ -n log 2` by Step 1. In the notation of (U4), `P_i = (r_{f_i})^g` and
+`D(g)` is self-adjoint, and `Φ(g) ≥ 0` by Step 1 (since `log(L⁻¹) ≤ L⁻¹ - 1` gives
+`τ(log L) = -τ(log L⁻¹) ≥ 1 - τ(L⁻¹) = 0`). In the notation of (U4), `P_i = (r_{f_i})^g` and
 `Q_i = (k_{f_i})^g`.
 
 ### Step 3. The first derivative
@@ -234,12 +236,14 @@ gives one into `U(zM)`, against the first part.
 ## 6. Proofs of the corollaries
 
 **Corollary 1.** Let `A` be a unital C*-algebra with a tracial state `τ`, and let `(π, H, ξ)` be the GNS
-representation of `τ`. Put `N = π(A)''` and `ω(x) = ⟨xξ, ξ⟩`. Then `ω` is a normal state on `N`. It is tracial on
-`π(A)`, and so on `N` (Kaplansky density; pass to the strong limit in one factor at a time). It is faithful: if
-`ω(x*x) = 0`, then `xξ = 0`, and `⟨x aξ, bξ⟩ = ω(b*xa) = ω(ab*x) = ⟨xξ, ba*ξ⟩ = 0` for `a`, `b` in `N`; the vectors
-`aξ` are dense, so `x = 0`. So `N` is a nonzero finite von Neumann algebra, and `π` is a unital ring homomorphism
-from `A` to `N`, a subring of `U(N)`. A unital ring homomorphism from `S` to `A` would give one from `S` to `U(N)`,
-against Theorem B.
+representation of `τ`. Put `N = π(A)''` and `ω(x) = ⟨xξ, ξ⟩`. Then `ω` is a normal state on `N` (so `N ≠ 0`) that is
+tracial on `π(A)`. Since `π(A)` is weak-operator dense in `N` (bicommutant theorem), for fixed `b` in `π(A)` and `x` in
+`N` a net `a_α` in `π(A)` converging weakly to `x` gives `ω(xb) = lim ⟨a_α bξ, ξ⟩ = lim ω(a_α b) = lim ω(b a_α) =
+lim ⟨a_α ξ, b*ξ⟩ = ω(bx)`, and approximating `y` in `N` weakly by `b_β` in `π(A)` then gives `ω(xy) = ω(yx)`; thus `ω`
+is tracial on `N`. It is faithful: if `ω(x*x) = 0`, then `xξ = 0`, and `⟨x aξ, bξ⟩ = ω(b*xa) = ω(ab*x) = ⟨xξ, ba*ξ⟩ = 0`
+for `a`, `b` in `π(A)`; the vectors `aξ` (`a` in `π(A)`) are dense, so `x = 0`. So `N` is a nonzero finite von Neumann
+algebra, and `π` is a unital ring homomorphism from `A` to `N`, a subring of `U(N)`. A unital ring homomorphism from
+`S` to `A` would give one from `S` to `U(N)`, against Theorem B.
 
 **Corollary 2.** Let `φ` be a nonzero ring homomorphism from `S` to `U(M)`. Then `e = φ(1)` is a nonzero idempotent,
 and `φ` is a unital ring homomorphism into the ring `eUe`. As in Step 8, `e = p + a` with the range projection `p` of
