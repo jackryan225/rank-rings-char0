@@ -70,7 +70,11 @@ ring embeds to some M^alg_ν".
 **Stable finiteness (paper argument, not in Lean).** `S` is stably finite: `M_n(S)` is directly finite for every
 `n`. The ring `M_n` of the `ℓ`-adic rank ring is again an `ℓ`-adic rank ring, with `n`-fold larger matrices, so it
 has a faithful rank function, and a ring with a faithful rank function is directly finite. The rank function of
-`S` extends to a faithful Sylvester matrix rank function (Goodearl, *von Neumann Regular Rings*, Chapter 16).
+`S` extends to a faithful Sylvester matrix rank function (Goodearl, *von Neumann Regular Rings*, Chapter 16). In
+particular, `S` (and the finitely generated complex subalgebra inside `elek_complex`) is a stably finite algebra that
+is not linear sofic while still admitting a faithful Sylvester rank function, contrasting with Greenfeld's stably
+finite non-linearly-sofic algebras (B. Greenfeld, *Math. Proc. Cambridge Philos. Soc.* 175 (2023), 319-325,
+arXiv:2210.11650; see "Earlier work" below), which admit no faithful Sylvester rank function.
 
 ## The relations `B_ℓ`
 
