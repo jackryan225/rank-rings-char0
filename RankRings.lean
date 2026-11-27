@@ -1,21 +1,26 @@
-import RankRings.LogDet
-import RankRings.Descent
-import RankRings.Plane
-import RankRings.Ineq
-import RankRings.SRank
-import RankRings.Smith
-import RankRings.RankRing
-import RankRings.RankFn
-import RankRings.Words
-import RankRings.WordsBlock
-import RankRings.Geom
-import RankRings.Exotic
-import RankRings.ExoticS
-import RankRings.NoHom
-import RankRings.NoHomF
-import RankRings.CAlg
-import RankRings.Main
-import RankRings.Final
-import RankRings.FiniteForm
-import RankRings.FiniteFormF
-import RankRings.ModL
+module
+
+public import RankRings.LogDet
+public import RankRings.Descent
+public import RankRings.Plane
+public import RankRings.Ineq
+public import RankRings.SRank
+public import RankRings.Smith
+public import RankRings.RankRing
+public import RankRings.RankFn
+public import RankRings.Words
+public import RankRings.WordsBlock
+public import RankRings.Geom
+public import RankRings.Exotic
+public import RankRings.ExoticS
+public import RankRings.NoHom
+public import RankRings.NoHomF
+public import RankRings.CAlg
+public import RankRings.Main
+public import RankRings.Final
+public import RankRings.FiniteForm
+public import RankRings.FiniteFormF
+public import RankRings.ModL
+@[expose] public section
+
+end

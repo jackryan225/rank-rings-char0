@@ -1,5 +1,8 @@
-import RankRings.SRank
+module
 
+public import RankRings.SRank
+
+@[expose] public section
 /-!
 # Smith normal form over an ultrametric field, and the rank at scale `r` of a diagonal matrix
 -/
@@ -409,3 +412,5 @@ lemma srk_fromBlocks_diag {r : ℝ} (hr : 0 ≤ r) (A B : Matrix n n K) :
 end blocks
 
 end RankRings
+
+end

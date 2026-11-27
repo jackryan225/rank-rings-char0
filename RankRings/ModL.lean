@@ -1,5 +1,8 @@
-import RankRings.FiniteForm
+module
 
+public import RankRings.FiniteForm
+
+@[expose] public section
 /-!
 # Cor 2(iii): exact finite-dimensional representations over `𝔽_ℓ`
 
@@ -296,3 +299,5 @@ end RankRings
 #print axioms RankRings.rel_modL
 #print axioms RankRings.char_contrast
 #print axioms RankRings.finite_form_modL
+
+end

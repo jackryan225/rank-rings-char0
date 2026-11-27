@@ -1,5 +1,8 @@
-import RankRings.LogDet
+module
 
+public import RankRings.LogDet
+
+@[expose] public section
 /-!
 # The near-minimizer
 
@@ -278,3 +281,5 @@ theorem exists_balanced {P : Type*} [Fintype P] [Nonempty P] (f : P → Matrix n
   exact (div_le_div_iff_of_pos_right (by positivity)).1 hfinal
 
 end RankRings
+
+end

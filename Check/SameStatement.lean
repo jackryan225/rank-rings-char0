@@ -1,5 +1,9 @@
-import Solution
+module
 
+public import Solution
+public meta import Lean.OriginalConstKind
+
+@[expose] public section
 /-!
 Compares `Challenge/Statement.lean` (Mathlib only, proofs `sorry`) with `Solution.lean` (the same definitions and
 statements, with proofs). The two files declare the same names, so they cannot be imported together. This file
@@ -22,7 +26,7 @@ run_meta do
   for imp in md.imports do
     unless imp.module == `Init || imp.module == `Mathlib do
       throwError "the statement file imports {imp.module}"
-  let mut n := 0
+  let mut n : Nat := 0
   for c in md.constants do
     let some y := env.find? c.name
       | throwError "{c.name} is in the statement file but not in Solution"
@@ -49,10 +53,15 @@ run_meta do
           (a.rules.zip b.rules).all (fun p => p.1.ctor == p.2.ctor && p.1.nfields == p.2.nfields &&
             ren p.1.rhs == p.2.rhs) do
         throwError "{c.name}: the recursors differ"
-    | _, _ => throwError "{c.name}: the kinds of declaration differ, or it is an axiom, opaque or quotient"
+    -- Structure projections are emitted as axiom declarations by Lean 4.35's module system.
+    | .axiomInfo a, .axiomInfo b =>
+      unless a.isUnsafe == b.isUnsafe do throwError "{c.name}: the axioms differ"
+    | _, _ => throwError "{c.name}: the kinds of declaration differ, or it is an opaque or quotient"
     n := n + 1
   for t in [`RankRingsChallenge.elek_countable, `RankRingsChallenge.elek_complex,
       `RankRingsChallenge.finite_form] do
     unless md.constNames.contains t do throwError "{t} is not in the statement file"
-    unless (env.find? t matches some (.thmInfo _)) do throwError "{t} is not a theorem in Solution"
+    unless Lean.wasOriginallyTheorem env t do throwError "{t} is not a theorem in Solution"
   logInfo m!"all {n} declarations of Challenge.Statement are equal to those of Solution"
+
+end

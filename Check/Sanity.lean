@@ -1,6 +1,9 @@
-import Challenge.Statement
-import RankRings.NoHomF
+module
 
+public import Challenge.Statement
+public import RankRings.NoHomF
+
+@[expose] public section
 /-!
 # Sanity checks of the definitions in `Challenge/Statement.lean`
 
@@ -137,3 +140,5 @@ end RankRingsSanity
 #print axioms RankRingsSanity.rat_maps
 #print axioms RankRingsSanity.complex_maps
 #print axioms RankRingsSanity.matrix_maps
+
+end

@@ -1,7 +1,10 @@
-import RankRings.Words
-import RankRings.WordsBlock
-import RankRings.Geom
+module
 
+public import RankRings.Words
+public import RankRings.WordsBlock
+public import RankRings.Geom
+
+@[expose] public section
 /-! Part B assembled: the `l`-adic approximate solutions of the relations
 of `B_l` on words, over `ℤ_[l]`. Mathlib only. -/
 
@@ -267,3 +270,5 @@ theorem exotic (l : ℕ) [Fact l.Prime]
 end main
 
 end RankRings
+
+end

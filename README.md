@@ -237,7 +237,7 @@ lake env lean Check/Sanity.lean                       # the definitions admit ma
 lake env leanchecker RankRings Solution               # replays the proofs in the kernel checker
 ```
 
-Lean 4.34.1 (`lean-toolchain`). Mathlib commit `d13f23b` (`lake-manifest.json`). The workflow
+Lean 4.35.0 (`lean-toolchain`). Mathlib commit `56a0058` (`lake-manifest.json`). The workflow
 `.github/workflows/check.yml` runs the first five steps on each push.
 
 `Challenge/Statement.lean` and `Solution.lean` declare the same names, so one Lean file cannot import both.

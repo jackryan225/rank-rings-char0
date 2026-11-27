@@ -1,5 +1,8 @@
-import RankRings.RankRing
+module
 
+public import RankRings.RankRing
+
+@[expose] public section
 /-!
 # The rank function on `RR K ι ω`, and von Neumann regularity
 -/
@@ -394,3 +397,5 @@ theorem rr_regular (hω : ∀ j : ℕ, ∀ᶠ k in (ω : Filter ℕ), j ≤ k) (
   simpa only [Subalgebra.coe_mul] using hnull
 
 end RankRings
+
+end

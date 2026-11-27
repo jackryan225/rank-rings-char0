@@ -1,6 +1,9 @@
-import RankRings.Final
-import RankRings.FiniteForm
+module
 
+public import RankRings.Final
+public import RankRings.FiniteForm
+
+@[expose] public section
 /-!
 # Rank rings of characteristic zero that are not limits of matrix rings: the statements
 
@@ -98,3 +101,5 @@ theorem finite_form : ∃ (Gn Rl : Type) (_ : Fintype Gn) (_ : Fintype Rl)
   exact ⟨Gn, Rl, i1, i2, rel, ε, hε, ⟨S, j1, j2, h1, h2, ⟨rk, isRankFunction_of h3⟩, x, hx⟩, h4⟩
 
 end RankRingsChallenge
+
+end

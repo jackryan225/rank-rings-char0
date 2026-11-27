@@ -1,5 +1,8 @@
-import RankRings.Main
+module
 
+public import RankRings.Main
+
+@[expose] public section
 /-!
 # The finite form: integer relations with no `ε`-approximate complex matrix solutions
 -/
@@ -136,3 +139,5 @@ theorem finite_form : ∃ (Gn Rl : Type) (_ : Fintype Gn) (_ : Fintype Rl)
     exact hA k j
 
 end RankRings
+
+end

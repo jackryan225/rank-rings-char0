@@ -1,6 +1,9 @@
-import RankRings.Ineq
-import RankRings.SRank
+module
 
+public import RankRings.Ineq
+public import RankRings.SRank
+
+@[expose] public section
 /-! The complex side: no unital ring homomorphism from the relations of
 `B_l` to a rank ultraproduct of complex matrix rings. Mathlib only, no epsilons in the statement. -/
 
@@ -379,3 +382,5 @@ theorem no_config {P L : Type*} [Membership P L] [ProjectivePlane P L] [Fintype 
 end Final
 
 end RankRings
+
+end

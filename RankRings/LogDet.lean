@@ -1,5 +1,8 @@
-import Mathlib
+module
 
+public import Mathlib
+
+@[expose] public section
 /-!
 # Determinant inequalities (Lemma 1 and the descent step)
 
@@ -230,3 +233,5 @@ lemma step_ineq {G : Matrix n n ℂ} (hG : G.IsHermitian) {s : ℝ} (hs : 0 < s)
     linarith
 
 end RankRings
+
+end

@@ -1,5 +1,8 @@
-import RankRings.Words
+module
 
+public import RankRings.Words
+
+@[expose] public section
 /-! The off-diagonal block of a tensor power, in matrix form.
 `X C^{⊗m} Y = l^{j+1} Q + R * W`, where `W` is the diagonal projection on the words of `Y`
 with fewer than `k + j` letters in `I` (a window). Mathlib only. -/
@@ -46,3 +49,5 @@ theorem offblock (I J : Finset (Fin 3)) (C : Matrix (Fin 3) (Fin 3) R) (l : R)
   exact Classical.choose_spec (hdiv w w')
 
 end RankRings
+
+end

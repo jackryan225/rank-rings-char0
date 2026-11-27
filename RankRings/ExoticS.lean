@@ -1,6 +1,9 @@
-import RankRings.RankFn
-import RankRings.Exotic
+module
 
+public import RankRings.RankFn
+public import RankRings.Exotic
+
+@[expose] public section
 /-!
 # The exotic configuration in the rank algebra over an `l`-adic field
 -/
@@ -155,3 +158,5 @@ theorem exotic_RR (l : ℕ) [Fact l.Prime] (K : Type*) [NormedField K] [IsUltram
     simpa using h2 p p' hpp k
 
 end RankRings
+
+end

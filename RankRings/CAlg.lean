@@ -1,5 +1,8 @@
-import Mathlib
+module
 
+public import Mathlib
+
+@[expose] public section
 /-!
 # The algebraic closure of `ℚ_[p]` is isomorphic (as a ring) to `ℂ`
 
@@ -35,3 +38,5 @@ theorem nonempty_padicAlgCl_equiv_complex (p : ℕ) [Fact p.Prime] :
   · rw [← Cardinal.eq, mk_padicAlgCl p, Cardinal.mk_complex]
 
 end RankRings
+
+end

@@ -1,4 +1,7 @@
-import Solution
+module
+
+public import Solution
+@[expose] public section
 set_option pp.all true
 set_option pp.maxSteps 10000000
 set_option pp.deepTerms true
@@ -9,3 +12,5 @@ set_option pp.deepTerms true
 #check @RankRingsChallenge.elek_countable
 #check @RankRingsChallenge.elek_complex
 #check @RankRingsChallenge.finite_form
+
+end

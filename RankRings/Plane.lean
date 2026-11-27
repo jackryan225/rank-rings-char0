@@ -1,5 +1,8 @@
-import Mathlib
+module
 
+public import Mathlib
+
+@[expose] public section
 /-!
 # The inequality of the projective plane (expander mixing with the second singular value `√q`)
 -/
@@ -194,3 +197,5 @@ theorem plane_ineq {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℝ H]
   linarith
 
 end RankRings
+
+end

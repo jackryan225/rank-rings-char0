@@ -1,7 +1,10 @@
-import RankRings.Main
-import RankRings.NoHomF
-import RankRings.CAlg
+module
 
+public import RankRings.Main
+public import RankRings.NoHomF
+public import RankRings.CAlg
+
+@[expose] public section
 /-!
 # Final forms: all fields of characteristic zero, a `ℂ`-algebra, and the finite `ε` form
 -/
@@ -39,3 +42,5 @@ theorem main_complex : ∃ (S : Type) (_ : Ring S) (_ : Algebra ℂ S), IsVNRegu
     fun I ω d F _ _ hd => ⟨fun ψ => no_config_RUF ω d F hd (c.map ψ)⟩⟩
 
 end RankRings
+
+end

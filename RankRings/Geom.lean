@@ -1,5 +1,8 @@
-import Mathlib
+module
 
+public import Mathlib
+
+@[expose] public section
 /-! Geometric inputs. Mathlib only.
 `exists_sigma`: a bijection from points to lines with `p ∉ σ p` (Hall's theorem);
 `exists_beta`, `exists_alpha`: adapted bases over a field;
@@ -246,3 +249,5 @@ theorem exists_lift (l : ℕ) [Fact l.Prime] (β β' : Matrix (Fin 3) (Fin 3) (Z
 end lift
 
 end RankRings
+
+end

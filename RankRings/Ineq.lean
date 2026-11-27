@@ -1,6 +1,9 @@
-import RankRings.Descent
-import RankRings.Plane
+module
 
+public import RankRings.Descent
+public import RankRings.Plane
+
+@[expose] public section
 /-!
 # Theorem 1: the inequality for complex idempotents indexed by a projective plane
 -/
@@ -257,3 +260,5 @@ theorem ineq_C {P L : Type*} [Membership P L] [ProjectivePlane P L] [Fintype P] 
   nlinarith [hcoef, hmono, hplane]
 
 end RankRings
+
+end

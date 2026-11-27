@@ -28,7 +28,7 @@ sources:
     id: "https://github.com/jackryan225/rank-rings-char0"
     type: "original-proof"
     location: "Sections 1-5 (Theorems 1.1 and 1.2, unital versions)"
-    relationship: "formalizes"
+    relationship: "other"
     author_endorsement: "participated"
     note: >
       Original paper and Lean 4 formalization developed together. Accompanying manuscript
@@ -63,7 +63,7 @@ automation:
       tool_setup: >
         Custom multi-agent orchestration harness coordinating frontier LLMs for proof
         discovery, Lean 4 formalization, independent statement/axiom auditing, and manuscript
-        verification against Lean 4.34.1 and Mathlib.
+        verification against Lean 4.35.0 and Mathlib.
       prompting_notes: >
         Directed, orchestrated, and reviewed by Jack Ryan with cross-model blind checks
         and mechanical Lean 4 kernel verification.

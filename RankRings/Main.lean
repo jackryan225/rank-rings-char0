@@ -1,6 +1,9 @@
-import RankRings.ExoticS
-import RankRings.NoHom
+module
 
+public import RankRings.ExoticS
+public import RankRings.NoHom
+
+@[expose] public section
 /-!
 # The main theorem: a countable regular rank `ℚ`-algebra that is not a rank-ultraproduct limit
 -/
@@ -235,3 +238,5 @@ theorem main_countable : ∃ (S : Type) (_ : Ring S) (_ : Algebra ℚ S), Counta
   exact ⟨S, instR, instA, h1, h2, rk, h3, fun I ω d hd => ⟨fun φ => no_config_RU ω d hd (c.map φ)⟩⟩
 
 end RankRings
+
+end

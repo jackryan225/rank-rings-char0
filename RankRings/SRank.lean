@@ -1,5 +1,8 @@
-import Mathlib
+module
 
+public import Mathlib
+
+@[expose] public section
 /-!
 # The rank at scale `r`
 
@@ -121,3 +124,5 @@ lemma srk_mul_left_le {r : ℝ} (hr : 0 ≤ r) {A : Matrix m n K} (B : Matrix n 
   exact h
 
 end RankRings
+
+end

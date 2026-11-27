@@ -1,6 +1,9 @@
-import RankRings.Ineq
-import RankRings.SRank
+module
 
+public import RankRings.Ineq
+public import RankRings.SRank
+
+@[expose] public section
 /-! All fields of characteristic zero: the relations of `B_l`
 have no solution in a rank ultraproduct of matrix rings `M_{d i}(F i)` over arbitrary fields
 `F i` of characteristic zero. At one good coordinate the finitely many matrices involved have
@@ -486,3 +489,5 @@ end Final
 
 end Gen
 end RankRings
+
+end

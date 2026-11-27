@@ -1,6 +1,9 @@
-import RankRings.FiniteForm
-import RankRings.NoHomF
+module
 
+public import RankRings.FiniteForm
+public import RankRings.NoHomF
+
+@[expose] public section
 /-!
 # The finite `ε` form over every field of characteristic zero (paper Corollary B(ii), `ℓ = 7`)
 
@@ -291,3 +294,5 @@ end RankRings
 #print axioms RankRings.finite_form_of_char0
 #print axioms RankRings.eps_char0_paper
 #print axioms RankRings.finite_form_paper
+
+end

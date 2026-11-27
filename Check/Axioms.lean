@@ -1,6 +1,9 @@
-import Solution
-import RankRings
+module
 
+public import Solution
+public import RankRings
+
+@[expose] public section
 /-! Prints the axioms of the results. Expected for each: `propext`, `Classical.choice`, `Quot.sound`. -/
 
 #print axioms RankRingsChallenge.elek_countable
@@ -24,3 +27,5 @@ import RankRings
 #print axioms RankRings.config_modL
 #print axioms RankRings.rel_modL
 #print axioms RankRings.finite_form_modL
+
+end

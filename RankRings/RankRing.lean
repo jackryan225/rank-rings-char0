@@ -1,5 +1,8 @@
-import RankRings.Smith
+module
 
+public import RankRings.Smith
+
+@[expose] public section
 /-!
 # The rank algebra `S`: tight sequences modulo null sequences
 
@@ -196,3 +199,5 @@ variable (K ι ω) in
 abbrev RR := (nullCon K ι ω).Quotient
 
 end RankRings
+
+end

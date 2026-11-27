@@ -1,5 +1,8 @@
-import Mathlib
+module
 
+public import Mathlib
+
+@[expose] public section
 /-! Words in three letters. Mathlib only.
 B1 tensor powers, B2 interleaving, B3 anticoncentration, B4 the exact third. -/
 
@@ -462,3 +465,5 @@ theorem window_le (j : ℕ) (δ : ℝ) (hδ : 0 < δ) : ∃ K : ℕ, ∀ k ≥ K
 
 
 end RankRings
+
+end

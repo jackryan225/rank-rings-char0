@@ -1,5 +1,8 @@
-import Mathlib
+module
 
+public import Mathlib
+
+@[expose] public section
 /-!
 # Rank rings of characteristic zero that are not limits of matrix rings: the statements
 
@@ -76,3 +79,5 @@ theorem finite_form : ∃ (Gn Rl : Type) (_ : Fintype Gn) (_ : Fintype Rl)
   sorry
 
 end RankRingsChallenge
+
+end
