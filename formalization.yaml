@@ -3,7 +3,7 @@ version: "v0.4"
 
 project:
   name: "Regular Rank Q-Algebras Without Homomorphisms into Characteristic-Zero Matrix Ultraproducts"
-  description: >
+  description: >-
     Formalizes in Lean 4 the construction of a countable von Neumann regular Q-algebra S
     equipped with a faithful rank function admitting no unital ring homomorphism into any
     rank ultraproduct of matrix rings over characteristic-zero fields (in particular Elek's
@@ -13,26 +13,26 @@ project:
     (arXiv:1006.5378) negatively by pairing a characteristic-zero projective-plane idempotent
     incidence rank bound with a 7-adic flag tensor-power regular rank ring (63 < 64).
   authors:
-    - "Jack Ryan (https://orcid.org/0009-0004-6846-7480)"
+    - name: "Jack Ryan"
+      orcid: "0009-0004-6846-7480"
   responsible_maintainers:
-    - "Jack Ryan (https://orcid.org/0009-0004-6846-7480)"
+    - name: "Jack Ryan"
+      orcid: "0009-0004-6846-7480"
   license: "Apache-2.0"
-
-repository:
-  role: "substantive-development"
 
 sources:
   - title: "Regular Rank Q-Algebras Without Homomorphisms into Characteristic-Zero Matrix Ultraproducts"
     authors:
-      - "Jack Ryan"
+      - name: "Jack Ryan"
+        orcid: "0009-0004-6846-7480"
     id: "https://github.com/jackryan225/rank-rings-char0"
     type: "original-proof"
     location: "Sections 1-5 (Theorems 1.1 and 1.2, unital versions)"
     relationship: "other"
     author_endorsement: "participated"
-    note: >
-      Original paper and Lean 4 formalization developed together. Accompanying manuscript
-      is in paper/rank_rings_char0.tex (and submitted to Hexagon Math).
+    note: >-
+      Original proof and Lean 4 formalization developed together. Accompanying manuscript
+      is in paper/rank_rings_char0.tex.
   - title: "Connes embeddings and von Neumann regular dimension functions"
     authors:
       - "Gábor Elek"
@@ -59,21 +59,23 @@ automation:
         - "claude-fable-5-2"
         - "gpt-6.2-astra"
         - "gemini-4-neon"
+        - "deepseek-v4.1-flash"
       framework: "Multi-model research and formalization harness orchestrated by Jack Ryan"
-      tool_setup: >
+      tool_setup: >-
         Custom multi-agent orchestration harness coordinating frontier LLMs for proof
-        discovery, Lean 4 formalization, independent statement/axiom auditing, and manuscript
-        verification against Lean 4.35.0 and Mathlib.
-      prompting_notes: >
+        discovery, Lean 4 formalization, independent statement/axiom auditing, Lean 4.35
+        module-system porting, and manuscript verification against Lean 4.35.0 and Mathlib.
+      prompting_notes: >-
         Directed, orchestrated, and reviewed by Jack Ryan with cross-model blind checks
         and mechanical Lean 4 kernel verification.
-  notes: >
+  spend_usd: "subscription-based"
+  notes: >-
     All three headline unital theorems are verified in Lean 4 against a Mathlib-only
     statement specification (Challenge/Statement.lean) with zero sorry and standard
     axioms only.
 
 status:
-  scope: >
+  scope: >-
     Complete formalization of the unital non-embedding theorems (elek_countable,
     elek_complex, and finite_form over C). The paper-only operator-algebraic and
     non-unital extensions in Section 6 (Theorem 6.1, affiliated operators U(M), tracial
@@ -111,7 +113,7 @@ status:
       comparator_config: "comparator.json"
 
 fidelity:
-  divergences: >
+  divergences: >-
     Challenge/Statement.lean states finite_form in existential form over C; the explicit
     B_7^sigma presentation, all-characteristic-zero-fields bound, and characteristic-7
     contrast are proved as internal Lean theorems in RankRings/FiniteFormF.lean and
@@ -122,14 +124,31 @@ review:
   status: "agent-reviewed"
   reviewers:
     - "Jack Ryan"
-    - "Claude Opus 5.5"
-    - "Claude Fable 5.2"
-    - "GPT-6.2 Astra"
-    - "Gemini 4 Neon"
-  notes: >
-    Verified with lake build, Check/SameStatement.lean, Check/Axioms.lean, Check/Sanity.lean,
-    and independent Lean kernels. Manuscript has not yet undergone traditional journal peer review.
+  notes: >-
+    Directed and reviewed by Jack Ryan with independent cross-model statement audits by
+    Claude Opus 5.5, Claude Fable 5.2, GPT-6.2 Astra, and Gemini 4 Neon, plus mechanical
+    verification via lake build, Check/SameStatement.lean, Check/Axioms.lean, and
+    Check/Sanity.lean. Manuscript has not yet undergone traditional journal peer review.
 
-acknowledgements: >
+alignment:
+  namespace: "RankRingsChallenge"
+  statements:
+    - source: "Theorem 1.1 (countable regular rank Q-algebra)"
+      lean: "RankRingsChallenge.elek_countable"
+      module: "Challenge.Statement"
+      status: "proved"
+      note: "Exact match for unital ring homomorphisms into any characteristic-zero matrix rank ultraproduct."
+    - source: "Theorem 1.1 (regular rank C-algebra)"
+      lean: "RankRingsChallenge.elek_complex"
+      module: "Challenge.Statement"
+      status: "proved"
+      note: "Exact match for unital ring homomorphisms over C (no claim of countable C-dimension)."
+    - source: "Theorem 1.2 (finitary non-approximate polynomial system over C)"
+      lean: "RankRingsChallenge.finite_form"
+      module: "Challenge.Statement"
+      status: "proved"
+      note: "Existential finitary form over C; explicit B_7^sigma and char-0/char-7 extensions are proved internally in RankRings/FiniteFormF.lean and RankRings/ModL.lean."
+
+acknowledgements: >-
   Thanks to Gábor Elek for his clear framing of the problem in arXiv:1006.5378 and for
   encouraging the write-up. Built on Lean 4 and Mathlib.
