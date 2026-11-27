@@ -1,0 +1,135 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "Regular Rank Q-Algebras Without Homomorphisms into Characteristic-Zero Matrix Ultraproducts"
+  description: >
+    Formalizes in Lean 4 the construction of a countable von Neumann regular Q-algebra S
+    equipped with a faithful rank function admitting no unital ring homomorphism into any
+    rank ultraproduct of matrix rings over characteristic-zero fields (in particular Elek's
+    M^alg_nu), the analogous regular rank C-algebra, and a finite noncommutative integer
+    polynomial system satisfied in S yet admitting no uniform epsilon-approximate solution
+    in M_N(C) for any N >= 1. Answers a reading of Elek's Section 1.2 question
+    (arXiv:1006.5378) negatively by pairing a characteristic-zero projective-plane idempotent
+    incidence rank bound with a 7-adic flag tensor-power regular rank ring (63 < 64).
+  authors:
+    - "Jack Ryan (https://orcid.org/0009-0004-6846-7480)"
+  responsible_maintainers:
+    - "Jack Ryan (https://orcid.org/0009-0004-6846-7480)"
+  license: "Apache-2.0"
+
+repository:
+  role: "substantive-development"
+
+sources:
+  - title: "Regular Rank Q-Algebras Without Homomorphisms into Characteristic-Zero Matrix Ultraproducts"
+    authors:
+      - "Jack Ryan"
+    id: "https://github.com/jackryan225/rank-rings-char0"
+    type: "original-proof"
+    location: "Sections 1-5 (Theorems 1.1 and 1.2, unital versions)"
+    relationship: "formalizes"
+    author_endorsement: "participated"
+    note: >
+      Original paper and Lean 4 formalization developed together. Accompanying manuscript
+      is in paper/rank_rings_char0.tex (and submitted to Hexagon Math).
+  - title: "Connes embeddings and von Neumann regular dimension functions"
+    authors:
+      - "Gábor Elek"
+    id: "arXiv:1006.5378"
+    type: "article"
+    location: "Section 1.2"
+    relationship: "background"
+    note: "Source of the open problem answered negatively in the countable regular rank Q-algebra reading."
+
+classification:
+  arxiv:
+    - "math.RA"
+    - "math.OA"
+  msc2020:
+    - "16E50"
+    - "46L10"
+    - "15A03"
+
+automation:
+  methods:
+    - method: "agent"
+      models:
+        - "claude-opus-5-5"
+        - "claude-fable-5-2"
+        - "gpt-6.2-astra"
+        - "gemini-4-neon"
+      framework: "Multi-model research and formalization harness orchestrated by Jack Ryan"
+      tool_setup: >
+        Custom multi-agent orchestration harness coordinating frontier LLMs for proof
+        discovery, Lean 4 formalization, independent statement/axiom auditing, and manuscript
+        verification against Lean 4.34.1 and Mathlib.
+      prompting_notes: >
+        Directed, orchestrated, and reviewed by Jack Ryan with cross-model blind checks
+        and mechanical Lean 4 kernel verification.
+  notes: >
+    All three headline unital theorems are verified in Lean 4 against a Mathlib-only
+    statement specification (Challenge/Statement.lean) with zero sorry and standard
+    axioms only.
+
+status:
+  scope: >
+    Complete formalization of the unital non-embedding theorems (elek_countable,
+    elek_complex, and finite_form over C). The paper-only operator-algebraic and
+    non-unital extensions in Section 6 (Theorem 6.1, affiliated operators U(M), tracial
+    C*-algebras, and Proposition 4.1 on stable finiteness) are not formalized in Lean 4.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+    - "propext"
+    - "Classical.choice"
+    - "Quot.sound"
+  main_results:
+    - declaration: "RankRingsChallenge.elek_countable"
+      file: "Challenge/Statement.lean"
+      sorry_count: 0
+      axioms:
+        - "propext"
+        - "Classical.choice"
+        - "Quot.sound"
+      comparator_config: "comparator.json"
+    - declaration: "RankRingsChallenge.elek_complex"
+      file: "Challenge/Statement.lean"
+      sorry_count: 0
+      axioms:
+        - "propext"
+        - "Classical.choice"
+        - "Quot.sound"
+      comparator_config: "comparator.json"
+    - declaration: "RankRingsChallenge.finite_form"
+      file: "Challenge/Statement.lean"
+      sorry_count: 0
+      axioms:
+        - "propext"
+        - "Classical.choice"
+        - "Quot.sound"
+      comparator_config: "comparator.json"
+
+fidelity:
+  divergences: >
+    Challenge/Statement.lean states finite_form in existential form over C; the explicit
+    B_7^sigma presentation, all-characteristic-zero-fields bound, and characteristic-7
+    contrast are proved as internal Lean theorems in RankRings/FiniteFormF.lean and
+    RankRings/ModL.lean (quantifying over Type 0 fields). Section 6 (affiliated operators
+    and tracial C*-algebras) and Proposition 4.1 (stably finite contrast) are paper-only.
+
+review:
+  status: "agent-reviewed"
+  reviewers:
+    - "Jack Ryan"
+    - "Claude Opus 5.5"
+    - "Claude Fable 5.2"
+    - "GPT-6.2 Astra"
+    - "Gemini 4 Neon"
+  notes: >
+    Verified with lake build, Check/SameStatement.lean, Check/Axioms.lean, Check/Sanity.lean,
+    and independent Lean kernels. Manuscript has not yet undergone traditional journal peer review.
+
+acknowledgements: >
+  Thanks to Gábor Elek for his clear framing of the problem in arXiv:1006.5378 and for
+  encouraging the write-up. Built on Lean 4 and Mathlib.
